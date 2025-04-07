@@ -28,71 +28,71 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
-.ally-hidden{
-    clip: rect(1px,1px,1px,1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute
+@keyframe rotate {\
+    50% {
+        transform: rotate(0deg)
+    }
+    100%{
+        transfrom: rotate(360deg)
+    }
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
     font-family: 'GmarketSansMedium';
     background-color: #5B2386;
-    color: white;
+    color: #FFF;
 }
 
-header {
+/* 메인 컨텐츠 */
+#contents{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
 }
 
-h1 {
+/* 제목 이미지 */
+.title {
     display: flex;
     justify-content: center;
+
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-h1 .img_clock {
+.title .clock_img{
+    position: relative;
     width: 265px;
+    height: 265px;
 }
 
-h1 .img_title {
+.title_img{
     position: absolute;
     width: 564px;
-    top: 120px;
 }
 
-/* 1만 시간의 법칙 설명 */
-.intro_saying {
-    font-family: 'OTEnjoystoriesBA';
-    font-size: 36px;
-    color: #F5DF4D;
-    margin-bottom: 78px;
+.title_img img{
+    width: 100px;
+    height: auto;
 }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.quotes {
-    position: absolute;
-}
 
-.explain {
-    text-align: center;
-    line-height: 1.7;
-}
 
-.explain strong {
-    font-family: 'GmarketSansBold';
-    font-size: 20px;
-}
+
+
+
+
+
+
